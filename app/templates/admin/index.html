@@ -1,0 +1,9 @@
+{% extends "admin/master.html" %}
+
+{% block body %}
+    {% if current_user.is_authenticated %}
+        <h1>chào mừng</h1>
+    {% else %}
+        {% include "admin/login_admin.html" %}
+    {% endif %}
+{% endblock %}
